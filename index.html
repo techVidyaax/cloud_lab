@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Booking App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Bus Booking App</h1>
+        <nav>
+            <ul>
+                <li><a href="#routes" style="color:white;">Routes</a></li>
+                <li><a href="#booking" style="color:white;">Book a Ticket</a></li>
+                <li><a href="#audio-info" style="color:white;">Audio Info</a></li>
+                <li><a href="#contact" style="color:white;">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="routes">
+            <h2 style="text-align: center;">Available Routes</h2>
+ 
+            <table>
+                <thead>
+                    <tr>
+                        <th>Route Number</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Departure Time</th>
+                        <th>Arrival Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>101</td>
+                        <td>Coimbatore</td>
+                        <td>Salem</td>
+                        <td>08:00 AM</td>
+                        <td>12:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>102</td>
+                        <td>Chennai</td>
+                        <td>Trichy</td>
+                        <td>10:00 AM</td>
+                        <td>5:00 PM</td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="booking">
+            <h2 style="text-align: center;">Book Your Ticket</h2>
+            <form action="/submit-booking" method="POST">
+                <label for="name">Name:</label><br/>
+                <input type="text" id="name" name="name" required><br/>
+
+                <label for="route">Select Route:</label><br/>
+                <select id="route" name="route">
+                    <option value="101">Route 101 - Coimbatore to Salem</option>
+                    <option value="102">Route 102 - Chennai to Trichy</option>
+                    <!-- Add more options as needed -->
+                </select><br/>
+
+                <label for="date">Travel Date:</label><br/>
+                <input type="date" id="date" name="date" required><br/>
+
+                <label for="seats">Number of Seats:</label><br/>
+                <input type="number" id="seats" name="seats" min="1" max="10" required><br/>
+
+                <input type="submit" value="Book Now">
+            </form>
+        </section>
+
+        <section id="audio-info">
+            <h2 style="text-align: center;">Listen to Our Services</h2>
+            <!-- Replace with your own audio file URL -->
+            <audio controls>
+                <source src="C:\Users\POORNA\Downloads\p_38473269_920.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+
+    </main>
+
+    <footer id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: srividya0509@gmail.com</p>
+        <p>Phone: +91 123-456-7890</p>
+    </footer>
+
+</body>
+</html>
